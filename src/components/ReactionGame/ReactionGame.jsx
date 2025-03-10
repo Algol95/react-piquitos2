@@ -65,14 +65,14 @@ function ReactionGame() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="text-2xl font-bold mb-4">¡Juego de reacción!</h1>
+        <div className="flex flex-col items-center justify-center">
+            <h1 className="text-2xl font-bold mb-4 text-black">¡Juego de reacción!</h1>
             <div 
                 className={`w-40 h-40 ${boxColor} rounded-lg shadow-lg transition-colors duration-200 cursor-pointer`}
                 onClick={handleClick}
             ></div>
-            <p className="mt-4 text-lg">{reactionTime ? `Tiempo de reacción: ${reactionTime} ms` : "Haz clic cuando sea amarillo"}</p>
-            <p className="text-sm text-gray-600">{bestTime ? `Mejor tiempo: ${bestTime} ms` : "No hay récord aún"}</p>
+            <p className="mt-4 text-lg text-stone-500">{reactionTime ? `Tiempo de reacción: ${reactionTime} ms` : "Haz clic cuando sea amarillo"}</p>
+            <p className="text-sm text-stone-500">{bestTime ? `Mejor tiempo: ${bestTime} ms` : "No hay récord aún"}</p>
             <RestartButton onClick={startGame} />
             <button 
                 className="mt-4 px-4 py-2 bg-red-500 text-white font-bold rounded hover:bg-red-600 transition"
